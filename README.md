@@ -1,6 +1,6 @@
 # gorlanovaAV
 # Отчет а лабораторных работах
-# студент группы [ИДБ-15-05](https://github.com/stankin/design-2018/wiki/list-idb-15-xx) Горланова А.В.
+# студент группы [ИДБ-15-05](https://github.com/stankin/design-2018/wiki/list-idb-15-05) Горланова А.В.
 
 ## Лабораторная 1
 
