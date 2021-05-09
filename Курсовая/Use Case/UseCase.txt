@@ -13,25 +13,20 @@ ArrowColor Black
 BorderColor Black
 }
 
+actor App as "Мобильное\nприложение"
+actor DB as "База Данных"
 actor  User as "Пользователь\nприложения"
 
-usecase case1 as "Нажать кнопку\n"Новый пользователь""
-usecase case2 as "Перенаправить на\nстраницу регистрации"
-usecase case3 as "Ввести данные:\nлогин, пароль, имя,\nemail адресс"
-usecase case4 as "Нажать кнопку\n"Зарегистрироваться""
-usecase case5 as "Записать данные\nв Базу Данных"
+usecase case1 as "Запросить информацию\nпо выбранному информационному\nразделу приложения\nиз Базы Данных"
+usecase case2 as "Выдать данные\nпо выбранному информационному\nразделу приложения"
+usecase case3 as "Загрузить полученную\nинформацию на\nстраницу приложения"
+usecase case4 as "Получить информацию"
 
-actor App as "Мобильное\nприложение"
-User ---> case1
-User ---> case2
-User ---> case3
-User ---> case4
-User ---> case5
-
-
-case1 <--- App
-case2 <--- App
-case3 <--- App
-case4 <--- App
-case5 <--- App
+App ---> case1
+case1 ---> DB
+case2 <--- DB
+App <--- case2
+App ---> case3
+case3 ---> case4
+User <--- case4
 @enduml
