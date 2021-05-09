@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+
+skinparam actor {
+BackgroundColor White
+ArrowColor Black
+BorderColor Black
+}
+
+skinparam usecase {
+BackgroundColor White
+ArrowColor Black
+BorderColor Black
+}
+
+actor  User as "Пользователь\nприложения"
+usecase case1 as "Авторизироваться\nв приложении"
+usecase case2 as "Получить доступ\nк карте лояльности"
+usecase case3 as "Получить информацию\n"Новости и Акции"\n"О компании"\n"О программе лояльности"\n"FAQ""
+usecase case4 as "Узнать\nстоимость заправки"
+usecase case5 as "Оставить отзыв"
+
+actor App as "Мобильное\nприложение"
+User ---> case1
+User ---> case2
+User ---> case3
+User ---> case4
+User ---> case5
+
+case1 <--- App
+case2 <--- App
+case3 <--- App
+case4 <--- App
+case5 <--- App
+@enduml
