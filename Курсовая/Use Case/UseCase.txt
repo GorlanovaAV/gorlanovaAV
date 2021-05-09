@@ -15,21 +15,23 @@ BorderColor Black
 
 actor  User as "Пользователь\nприложения"
 
-usecase case1 as "Выбрать пункт\n"Новый пользователь""
-usecase case2 as "Перейти на\nстраницу регистрации"
+usecase case1 as "Нажать кнопку\n"Новый пользователь""
+usecase case2 as "Перенаправить на\nстраницу регистрации"
 usecase case3 as "Ввести данные:\nлогин, пароль, имя,\nemail адресс"
 usecase case4 as "Нажать кнопку\n"Зарегистрироваться""
-
+usecase case5 as "Записать данные\nв Базу Данных"
 
 actor App as "Мобильное\nприложение"
 User ---> case1
 User ---> case2
 User ---> case3
 User ---> case4
+User ---> case5
 
 
 case1 <--- App
 case2 <--- App
 case3 <--- App
 case4 <--- App
+case5 <--- App
 @enduml
