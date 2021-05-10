@@ -1,0 +1,16 @@
+@startuml
+skinparam monochrome true
+
+actor Пользователь as Bux
+participant "Мобильное приложение" as object
+database "База Данных" as DbTab
+
+Bux -> object: Пользователь нажал на кнопку\nперехода на страницу с\nинформацией
+activate Bux
+object -> DbTab: Запрос к данным
+activate object
+DbTab -> object: Данные
+deactivate object
+object -> Bux: Страница с данными
+deactivate Bux
+@enduml
